@@ -1,5 +1,7 @@
 package q01_basic.question07;
 
+import java.io.IOException;
+
 public class SystemMain07 {
 
 	public static void main(String[] args) {
@@ -9,6 +11,17 @@ public class SystemMain07 {
 		System.out.print("input number>>");
 		int limit = 0;
 		//TODO ここから実装する
+
+		ConsoleReader consoleReader = new ConsoleReader();
+		try {
+			consoleReader.inputNumber();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		}
+
+		numberList.addFromOneTo();
 
 		System.out.println("****************");
 		System.out.println("Listの合計を計算します");
