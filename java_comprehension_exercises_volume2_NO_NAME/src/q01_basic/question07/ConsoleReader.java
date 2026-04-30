@@ -8,7 +8,6 @@ public class ConsoleReader {
 
 	public int inputNumber() throws IOException, NumberFormatException {
 
-		System.out.println("input number>>");
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		String str = reader.readLine();
 		int num = Integer.parseInt(str);
