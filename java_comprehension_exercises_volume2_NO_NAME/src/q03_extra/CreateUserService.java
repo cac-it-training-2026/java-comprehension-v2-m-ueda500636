@@ -7,7 +7,7 @@ class CreateUserService {
 	/**
 	 * memberStorage Memberクラスのリスト一覧
 	 */
-	private MemberStorage memberStorage;
+	//	private MemberStorage memberStorage;
 
 	//TODO ここから実装する
 

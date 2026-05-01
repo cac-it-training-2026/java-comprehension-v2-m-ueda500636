@@ -1,23 +1,37 @@
-package q01_basic.question03;
+package q01_basic.question05;
 
-class Member {
-	//TODO ここから実装する
-	private String name;
+public class Member extends AbstMember {
+	private int id;
+	private String password;
 	private int age;
 	private int rank;
 
 	/**
-	 * @return name
+	 * @return id
 	 */
-	public String getName() {
-		return name;
+	public int getId() {
+		return id;
 	}
 
 	/**
-	 * @param name セットする name
+	 * @param id セットする id
 	 */
-	public void setName(String name) {
-		this.name = name;
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return password
+	 */
+	public String getPassword() {
+		return password;
+	}
+
+	/**
+	 * @param password セットする password
+	 */
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	/**
@@ -49,24 +63,34 @@ class Member {
 	}
 
 	/**
-	 * 引数なしのコンストラクタ。
+	 * 
 	 */
 	public Member() {
 	}
 
 	/**
+	 * @param id
+	 * @param password
 	 * @param name
 	 * @param age
 	 * @param rank
 	 */
-	public Member(String name, int age, int rank) {
+	public Member(int id, String password, String name, int age, int rank) {
+		this.id = id;
+		this.password = password;
 		this.name = name;
 		this.age = age;
 		this.rank = rank;
 	}
 
+	public void buyItem() {
+		System.out.println(name + " purchased the item at 50% off ");
+	}
+
 	public void showMember() {
 		System.out.println("***MEMBER DATA***");
+		System.out.println("id:" + id);
+		System.out.println("password:" + password);
 		System.out.println("name:" + name);
 		System.out.println("age;" + age);
 		System.out.println("rank:" + rank);

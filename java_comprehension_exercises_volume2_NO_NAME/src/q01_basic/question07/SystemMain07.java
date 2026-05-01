@@ -1,5 +1,7 @@
 package q01_basic.question07;
 
+import java.io.IOException;
+
 public class SystemMain07 {
 
 	public static void main(String[] args) {
@@ -10,10 +12,26 @@ public class SystemMain07 {
 		int limit = 0;
 		//TODO ここから実装する
 
+		ConsoleReader consoleReader = new ConsoleReader();
+		try {
+			limit = consoleReader.inputNumber();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		}
+
+		numberList.addFromOneTo(limit);
+		numberList.getNumbers();
+		System.out.println(numberList.getNumbers());
+
 		System.out.println("****************");
 		System.out.println("Listの合計を計算します");
 		int sum = 0;
 		//TODO ここから実装する
+
+		sum = numberList.calcSumOfList();
+		numberList.getNumbers();
 
 		System.out.println("1から" + limit + "までの合計は" + sum + "です。");
 
@@ -21,9 +39,17 @@ public class SystemMain07 {
 		System.out.println("Listの各要素を2倍します");
 		//TODO ここから実装する
 
+		numberList.doubleListEachValue();
+		numberList.getNumbers();
+		System.out.println(numberList.getNumbers());
+
 		System.out.println("****************");
 		System.out.println("Listの前半分のインデックスの要素を削除します");
 		//TODO ここから実装する
+
+		numberList.removeIndexOfFirstHalf();
+		numberList.getNumbers();
+		System.out.println(numberList.getNumbers());
 
 	}
 

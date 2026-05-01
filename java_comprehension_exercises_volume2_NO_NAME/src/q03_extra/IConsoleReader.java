@@ -1,9 +1,5 @@
 package q03_extra;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 /**
  * 標準入力を制御する基盤インターフェース
  * 
@@ -20,27 +16,27 @@ interface IConsoleReader {
 	 * @throws SystemErrorException IOExceptionをキャッチして送出する
 	 * @throws IllegalInputException isValidメソッドの結果がfalseの場合に送出する
 	 */
-	public default Object input() throws SystemErrorException, IllegalInputException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String input = null;
-		try {
-			//			br.close();//IOExceptionを発生させる場合はコメントを外して実行する
-			input = br.readLine();
-			if (!isValid(input)) {
-				String errorMsg = setErrorMsg();
-				throw new IllegalInputException(errorMsg);
-			}
-		} catch (IOException e) {
-			throw new SystemErrorException("システムエラーです", e);
-		}
+	//	public default Object input() throws SystemErrorException, IllegalInputException {
+	//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	//		String input = null;
+	//		try {
+	//						br.close();//IOExceptionを発生させる場合はコメントを外して実行する
+	//			input = br.readLine();
+	//			if (!isValid(input)) {
+	//				String errorMsg = setErrorMsg();
+	//				throw new IllegalInputException(errorMsg);
+	//			}
+	//		} catch (IOException e) {
+	//			throw new SystemErrorException("システムエラーです", e);
+	//		}
+	//
+	//		if (isParseInt()) {
+	//			return Integer.parseInt(input);
+	//		}
+	//
+	//		return input;
 
-		if (isParseInt()) {
-			return Integer.parseInt(input);
-		}
-
-		return input;
-
-	}
+	//	}
 
 	/**
 	 * @return 入力条件のエラーメッセージ

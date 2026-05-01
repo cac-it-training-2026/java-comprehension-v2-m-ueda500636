@@ -53,8 +53,8 @@ public class SystemMain {
 
 	public static void main(String[] args) {
 
-		MemberStorage memberStorage = new MemberStorage();
-		CreateUserService createUserService = new CreateUserService(memberStorage);
+		//		MemberStorage memberStorage = new MemberStorage();
+		//		CreateUserService createUserService = new CreateUserService(memberStorage);
 		boolean isCreated = false;
 		int inputId = 0;
 		String inputPassword = "";
